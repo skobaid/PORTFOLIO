@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/stylep.css' %}">
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>About</title>
+</head>
+
+<body>
+
+
+    <!-- header section starts  -->
+
+    <header>
+
+        <div id="menu-bars" class="fas fa-bars"></div>
+
+        {% include 'main/navbar.html' %}
+
+    </header>
+
+    <!-- header section ends -->
+
+    <!-- about section starts  -->
+
+    <section class="about" id="about">
+
+        <h1 class="heading"> about <span>me</span> </h1>
+
+        <div class="row">
+
+            <div class="image">
+                <img class="tilt" src="{% static 'main/images/pic1.png' %}" alt="">
+            </div>
+
+            <div class="content">
+                <h3> my name is <span> shaikh Obaid </span> </h3>
+                <p class="info">SKILLS :- JavaScript, JQuery, HTML, HTML5, CSS, CSS3,PYTHON Web Programming Skills,
+                    Teamwork, Verbal Communication, cross-browser compatibility, Web User Interface Design (UI),
+                <H4>FRAMEWORKS:- DJANGO AND EXPRESSJS</H4>
+                <H4>DATABASE:- POSTGRESQL AND MONGODB</H4>
+                </p>
+                <div class="box-container">
+                    <div class="box">
+                        <p> <span> age: </span> 24 </p>
+                        <p> <span> gender: </span> male </p>
+                        <p> <span> experience : </span> Fresher </p>
+                        <p> <span> freelance : </span> available </p>
+                    </div>
+                    <div class="box">
+                        <p> <span> language : </span> hindi / english/urdu </p>
+                        <p> <span> phone : </span> +8007821505 </p>
+                        <p> <span> email : </span> skobaid313@gmail.com </p>
+                        <p> <span> address : </span> malegaon, india - 423203 </p>
+                    </div>
+                </div>
+                <a href="#" class="btn">download CV</a>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script>
+
+        let menu = document.querySelector('#menu-bars');
+        let header = document.querySelector('header');
+
+        menu.onclick = () => {
+            menu.classList.toggle('fa-times');
+            header.classList.toggle('active');
+        }
+
+        window.onscroll = () => {
+            menu.classList.remove('fa-times');
+            header.classList.remove('active');
+        };
+
+        var typed = new Typed('.typing-text', {
+            strings: ['front end developer', 'web designer', 'graphic designer', 'web developer'],
+            loop: true,
+            typeSpeed: 150
+        });
+
+        VanillaTilt.init(document.querySelectorAll('.tilt'), {
+            max: 25
+        });
+
+    </script>
+    <!-- about section ends -->
+
+    <!-- 
+        <script src="{% static 'main/js/bootsrap.js' %}"></script>
+        <script src="{% static 'main/js/jquery.js' %}"></script>
+        <script src="{% static 'main/js/popper.js' %}"></script>
+        <script src="{% static 'main/js/all.min.js' %}"></script>
+        <script src="{% static 'main/js/app.min.js' %}"></script>
+        <script src="{% static 'main/js/particles.min.js' %}"></script> -->
+</body>
+
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/stylep.css' %}">
+     <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>HOME</title>
+</head>
+<body>
+       
+           
+<!-- header section starts  -->
+
+<header>
+
+    <div id="menu-bars" class="fas fa-bars"></div>
+
+   <!----> {% include 'main/navbar.html' %}
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div id="particles-js"></div>
+
+    <div class="content">
+        <img class="tilt" src="{% static 'main/images/pic1.png' %}" alt="">
+        <h3> SHAIKH <span>OBAID</span> </h3>
+        <p> i am a <span class="typing-text"> Back end developer </span> </p>
+        <a href="/about/" class="btn">about me</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+        
+
+        <!-- <script src="{% static 'main/js/bootsrap.js' %}"></script>
+        <script src="{% static 'main/js/jquery.js' %}"></script>
+        <script src="{% static 'main/js/popper.js' %}"></script>
+        <script src="{% static 'main/js/all.min.js' %}"></script>
+        <script src="{% static 'main/js/app.min.js' %}"></script>
+        <script src="{% static 'main/js/particles.min.js' %}"></script> -->
+
+
+        <!-- javascript part  -->
+
+<!-- typed.js link  -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+
+<!-- particles.js links  -->
+<!-- <script src="{% static 'main/js/particles.min.js' %}"></script>
+<script src="{% static 'main/js/app.js' %}"></script>
+
+vanilla-tilt.js link 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script> -->
+
+<script>
+
+let menu = document.querySelector('#menu-bars');
+let header = document.querySelector('header');
+
+menu.onclick = () =>{
+    menu.classList.toggle('fa-times');
+    header.classList.toggle('active');
+}
+
+window.onscroll = () =>{
+    menu.classList.remove('fa-times');
+    header.classList.remove('active');
+};
+
+var typed = new Typed('.typing-text', {
+    strings : ['front end developer', 'web designer', 'graphic designer', 'web developer'],
+    loop : true,
+    typeSpeed : 150
+});
+
+VanillaTilt.init(document.querySelectorAll('.tilt'),{
+    max:25
+});
+
+</script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+ {% load static  %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="{% static 'main/css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'main/css/stylep.css' %}">
+     <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+    <title>Services</title>
+</head>
+<body>
+<!-- header section starts  -->
+
+<header>
+
+    <div id="menu-bars" class="fas fa-bars"></div>
+
+    {% include 'main/navbar.html' %}
+
+</header>
+
+<!-- header section ends -->
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+    <h1 class="heading"> <span> my </span> services </h1>
+
+    <div class="box-container">
+
+        <div class="box tilt">
+            <i class="fas fa-code"></i>
+            <h3>web development</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div>
+
+        <div class="box tilt">
+            <i class="fas fa-paint-brush"></i>
+            <h3>graphic design</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div>
+
+        <div class="box tilt">
+            <i class="fas fa-bullhorn"></i>
+            <h3>seo marketing</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div>
+
+        <div class="box tilt">
+            <i class="fas fa-envelope"></i>
+            <h3>email marketing</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div>
+
+        <div class="box tilt">
+            <i class="fas fa-mobile"></i>
+            <h3>Responsive designs</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div>
+
+        <div class="box tilt">
+            <i class="fab fa-wordpress"></i>
+            <h3>wordpress</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa, quidem.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- services section ends -->
+    
+        <!-- <script src="{% static 'main/js/bootsrap.js' %}"></script>
+        <script src="{% static 'main/js/jquery.js' %}"></script>
+        <script src="{% static 'main/js/popper.js' %}"></script>
+        <script src="{% static 'main/js/all.min.js' %}"></script>
+        <script src="{% static 'main/js/app.min.js' %}"></script>
+        <script src="{% static 'main/js/particles.min.js' %}"></script> -->
+        
+<script>
+
+    let menu = document.querySelector('#menu-bars');
+    let header = document.querySelector('header');
+    
+    menu.onclick = () =>{
+        menu.classList.toggle('fa-times');
+        header.classList.toggle('active');
+    }
+    
+    window.onscroll = () =>{
+        menu.classList.remove('fa-times');
+        header.classList.remove('active');
+    };
+    
+    var typed = new Typed('.typing-text', {
+        strings : ['front end developer', 'web designer', 'graphic designer', 'web developer'],
+        loop : true,
+        typeSpeed : 150
+    });
+    
+    VanillaTilt.init(document.querySelectorAll('.tilt'),{
+        max:25
+    });
+    
+    </script>
+</body>
+</html>
